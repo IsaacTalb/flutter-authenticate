@@ -206,53 +206,53 @@ class _SignUpFormState extends State<SignUpForm> {
                 child: const Text('Signup'),
               );
             }),
-            Container(
-                margin: const EdgeInsets.all(20),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 500),
-                        child: const Divider(
-                          thickness: 2,
-                          color: Colors.grey,
-                        )),
-                    Positioned(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            border: Border.all(color: Colors.black),
-                            borderRadius: BorderRadius.circular(15)),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 5, vertical: 3),
-                        child: const Text(
-                          'OR',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                      ),
-                    )
-                  ],
-                )),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                optionsBox(
-                    color: Colors.blue,
-                    imagePath: "assets/facebook_icon.png",
-                    onPressed: () {}),
-                optionsBox(
-                    color: Colors.red,
-                    imagePath: "assets/google_icon.png",
-                    onPressed: () {
-                      BlocProvider.of<AuthBloc>(context)
-                          .add(SignInWithGoogleEvent());
-                    }),
-                optionsBox(
-                    color: Colors.blue,
-                    imagePath: "assets/twitter_icon.png",
-                    onPressed: () {}),
-              ],
-            ),
+            // Container(
+            //     margin: const EdgeInsets.all(20),
+            //     child: Stack(
+            //       alignment: Alignment.center,
+            //       children: [
+            //         ConstrainedBox(
+            //             constraints: const BoxConstraints(maxWidth: 500),
+            //             child: const Divider(
+            //               thickness: 2,
+            //               color: Colors.grey,
+            //             )),
+            //         Positioned(
+            //           child: Container(
+            //             decoration: BoxDecoration(
+            //                 color: Colors.white,
+            //                 border: Border.all(color: Colors.black),
+            //                 borderRadius: BorderRadius.circular(15)),
+            //             padding: const EdgeInsets.symmetric(
+            //                 horizontal: 5, vertical: 3),
+            //             child: const Text(
+            //               'OR',
+            //               style: TextStyle(color: Colors.blue),
+            //             ),
+            //           ),
+            //         )
+            //       ],
+            //     )),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     optionsBox(
+            //         color: Colors.blue,
+            //         imagePath: "assets/facebook_icon.png",
+            //         onPressed: () {}),
+            //     optionsBox(
+            //         color: Colors.red,
+            //         imagePath: "assets/google_icon.png",
+            //         onPressed: () {
+            //           BlocProvider.of<AuthBloc>(context)
+            //               .add(SignInWithGoogleEvent());
+            //         }),
+            //     optionsBox(
+            //         color: Colors.blue,
+            //         imagePath: "assets/twitter_icon.png",
+            //         onPressed: () {}),
+            //   ],
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

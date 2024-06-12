@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'medical-authen.appspot.com',
     measurementId: 'G-8P7MZKNKR9',
   );
+
 }

@@ -23,8 +23,13 @@ class _SignInState extends State<SignIn> {
                   image: AssetImage("assets/sign_in.png")),
             ),
             Center(
-                child: Text("Login", style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold),)),
-            SizedBox(height: 10,),
+                child: Text(
+              "Login",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            )),
+            SizedBox(
+              height: 10,
+            ),
             LoginForm(),
           ],
         ),
