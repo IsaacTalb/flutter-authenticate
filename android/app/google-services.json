@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "905783900585",
+    "project_id": "medical-authen",
+    "storage_bucket": "medical-authen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905783900585:android:ab43b597d52a43db486cb8",
+        "android_client_info": {
+          "package_name": "com.example.authentication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjSBY3ppl4GydQ6TzJMOTz8O-1DD2oA08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
