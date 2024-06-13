@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">905783900585</string>
+    <string name="google_api_key" translatable="false">AIzaSyDjSBY3ppl4GydQ6TzJMOTz8O-1DD2oA08</string>
+    <string name="google_app_id" translatable="false">1:905783900585:android:ab43b597d52a43db486cb8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDjSBY3ppl4GydQ6TzJMOTz8O-1DD2oA08</string>
+    <string name="google_storage_bucket" translatable="false">medical-authen.appspot.com</string>
+    <string name="project_id" translatable="false">medical-authen</string>
+</resources>
