@@ -25,10 +25,12 @@ class _HomePageState extends State<HomePage> {
             child: Scaffold(
               backgroundColor: Colors.white,
               appBar: AppBar(
-                title: const Text('Home page'),
+                title: const Text('Medical Herb'),
                 actions: [
                   TextButton(
-                    child: const Text('Log out', style: TextStyle(color: Colors.red)),
+                    child: const Text('Log out',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 12, 109, 139))),
                     onPressed: () {
                       BlocProvider.of<AuthBloc>(context).add(LogOutEvent());
                     },
@@ -37,11 +39,9 @@ class _HomePageState extends State<HomePage> {
               ),
               body: const Center(
                 child: Image(
-                  image: AssetImage('assets/home_page_background.gif'),
+                  image: AssetImage('assets/home-bg-animate.gif'),
                 ),
               ),
-            )
-        )
-    );
+            )));
   }
 }

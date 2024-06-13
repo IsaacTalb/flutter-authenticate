@@ -20,7 +20,7 @@ class _SignInState extends State<SignIn> {
               child: Image(
                   height: 200,
                   width: 200,
-                  image: AssetImage("assets/sign_in.png")),
+                  image: AssetImage("assets/herb-sign-in.png")),
             ),
             Center(
                 child: Text(

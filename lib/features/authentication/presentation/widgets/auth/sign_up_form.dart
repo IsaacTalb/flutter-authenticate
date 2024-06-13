@@ -154,7 +154,8 @@ class _SignUpFormState extends State<SignUpForm> {
                       child: Center(
                         child: Text(
                           state.message,
-                          style: const TextStyle(color: Colors.red),
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 145, 49, 43)),
                         ),
                       ),
                     ),
@@ -179,7 +180,7 @@ class _SignUpFormState extends State<SignUpForm> {
                         textStyle: MaterialStateProperty.all(
                             const TextStyle(fontSize: 18)),
                       ),
-                      child: const Text('Signup'),
+                      child: const Text('Sign up'),
                     )
                   ],
                 );
@@ -203,7 +204,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   textStyle:
                       MaterialStateProperty.all(const TextStyle(fontSize: 18)),
                 ),
-                child: const Text('Signup'),
+                child: const Text('Sign Up'),
               );
             }),
             // Container(

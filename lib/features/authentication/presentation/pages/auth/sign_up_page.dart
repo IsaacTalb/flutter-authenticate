@@ -11,7 +11,7 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
         body: ListView(
           children: const [
@@ -20,11 +20,16 @@ class _SignUpState extends State<SignUp> {
               child: Image(
                   height: 200,
                   width: 200,
-                  image: AssetImage("assets/sign_in.png")),
+                  image: AssetImage("assets/herb-sign-up.png")),
             ),
             Center(
-                child: Text("Signup", style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold),)),
-            SizedBox(height: 10,),
+                child: Text(
+              "Signup",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            )),
+            SizedBox(
+              height: 10,
+            ),
             SignUpForm(),
           ],
         ),

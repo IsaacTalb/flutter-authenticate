@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:authentication/features/authentication/domain/entities/sign_in_entity.dart';
 import 'package:authentication/features/authentication/presentation/bloc/authentication/auth_bloc.dart';
 import 'package:authentication/features/authentication/presentation/pages/auth/sign_up_page.dart';
+import 'package:authentication/features/authentication/presentation/pages/auth/forgot_password_page.dart';
 import 'package:authentication/features/authentication/presentation/pages/home.dart';
 
 import '../../pages/auth/verify_email.dart';
@@ -82,7 +83,35 @@ class _LoginFormState extends State<LoginForm> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 14,
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ForgotPasswordScreen()),
+                      );
+                    },
+                    child: const Text("Forgot Password?"),
+                    style: ButtonStyle(
+                      foregroundColor: MaterialStateProperty.all(Colors.blue),
+                      textStyle: MaterialStateProperty.all(
+                          TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(
+              height: 14,
             ),
             BlocConsumer<AuthBloc, AuthState>(listener: (context, state) {
               if (state is SignedInState) {
@@ -150,6 +179,7 @@ class _LoginFormState extends State<LoginForm> {
                 child: const Text('Login'),
               );
             }),
+
             // Container(
             //     margin: const EdgeInsets.all(20),
             //     child:  Stack(
