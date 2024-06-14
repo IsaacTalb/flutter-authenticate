@@ -22,28 +22,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (_)=> di.sl<AuthBloc>()..add(CheckLoggingInEvent()),
-        child: BlocBuilder<AuthBloc , AuthState>(
-          builder: (context , state) {
-            if(state is SignedInPageState){
-              return const MaterialApp(
-                title: 'Flutter Demo',
-                debugShowCheckedModeBanner: false,
-                home:  HomePage(),
-              );
-            }else{
-              return  MaterialApp(
-                title: 'Flutter Demo',
-                theme: ThemeData(
-                  useMaterial3: true,
-                  colorSchemeSeed: Colors.blue
-                ),
-                debugShowCheckedModeBanner: false,
-                home:  SignUp(),
-              );
-            }
+        create: (_) => di.sl<AuthBloc>()..add(CheckLoggingInEvent()),
+        child: BlocBuilder<AuthBloc, AuthState>(builder: (context, state) {
+          if (state is SignedInPageState) {
+            return const MaterialApp(
+              title: 'Flutter Demo',
+              debugShowCheckedModeBanner: false,
+              home: HomePage(),
+            );
+          } else {
+            return MaterialApp(
+              title: 'Flutter Demo',
+              theme:
+                  ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
+              debugShowCheckedModeBanner: false,
+              home: SignUp(),
+            );
           }
-        )
-    );
+        }));
   }
 }
