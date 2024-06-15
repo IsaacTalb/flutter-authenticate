@@ -1,0 +1,1 @@
+ /Users/isaactalb/development/Github-repo-project/flutter_authenticate/.dart_tool/flutter_build/0fe5595048269ee55fde8665d1b6ff93/native_assets.yaml: 

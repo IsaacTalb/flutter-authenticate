@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:authentication/features/authentication/presentation/pages/auth/sign_in_page.dart';
-import 'package:flutter-authenticate/components/my_bottom_nav_bar.dart';
-import 'package:flutter-authenticate/screens/home/components/body.dart';
-
+import 'package:authentication/features/authentication/presentation/components/my_bottom_nav_bar.dart';
+import 'package:authentication/features/authentication/presentation/pages/home/components/body.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../bloc/authentication/auth_bloc.dart';
 
 class HomePage extends StatefulWidget {

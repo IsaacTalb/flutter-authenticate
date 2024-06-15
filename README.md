@@ -115,3 +115,49 @@ This project is in the public domain. You are free to use, modify, and distribut
 - [Reso Coder's Flutter Clean Architecture series](https://resocoder.com/flutter-clean-architecture-tdd) for the excellent tutorials on Flutter architecture.
 
 - [BloC Library](https://bloclibrary.dev/) for providing a solid foundation for BLoC pattern implementation.
+
+## Project Structure
+
+lib/
+├── core/
+├── features/
+│   └── authentication/
+│       ├── data/
+│       ├── domain/
+│       └── presentation/
+│           ├── bloc/authentication
+|                    ├── auth_bloc.dart
+|                    ├── auth_event.dart
+|                    ├── auth_state.dart
+│           ├── pages/
+│           │   ├── home.dart
+│           │   ├── constants.dart
+│           │   └── details/
+│           │   |   └── components/
+│           │   |       └── body.dart
+│           │   |       └── icon_card.dart
+│           │   |       └── image_and_icons.dart
+│           │   |       └── title_and_price.dart
+│           │   |   └── details_screen.dart
+│           │   ├── auth/
+│           │   │   ├── sign_in_page.dart
+│           │   │   └── sign_up_page.dart
+│           │   │   └── forgot_password_page.dart
+│           │   │   └── verify_email.dart
+│           │   └── home/
+│           │       ├── home_screen.dart
+│           │       └── components/
+│           │           ├── body.dart
+│           │           ├── header_with_searchbox.dart
+│           │           ├── title_with_more_bbtn.dart
+│           │           ├── recommend_plants.dart
+│           │           ├── featured_plants.dart
+│           ├── widgets/auth
+│           │   │       ├── sign_in_form.dart
+│           │   │       ├── sign_up_form.dart
+│           └── components/
+│               └── my_bottom_nav_bar.dart
+├── firebase_options.dart
+├── injection_container.dart
+└── main.dart
+
