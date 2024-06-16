@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:authentication/features/authentication/presentation/pages/home.dart';
+import 'package:authentication/features/authentication/presentation/pages/home_page.dart';
 import '../../bloc/authentication/auth_bloc.dart';
 
 class VerifyEmail extends StatefulWidget {
@@ -66,12 +66,13 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text("Did not receive any email?"),
-                  TextButton(
-                      onPressed: () {
-                        BlocProvider.of<AuthBloc>(context)
-                            .add(SendEmailVerificationEvent());
-                      },
-                      child: const Text("resend email"))
+                  ElevatedButton(
+                    onPressed: () {
+                      BlocProvider.of<AuthBloc>(context)
+                          .add(SendEmailVerificationEvent());
+                    },
+                    child: const Text("resend email"),
+                  )
                 ],
               )
             ],

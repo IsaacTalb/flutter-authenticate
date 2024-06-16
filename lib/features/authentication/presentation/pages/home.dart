@@ -1,53 +1,46 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:authentication/features/authentication/presentation/pages/auth/sign_in_page.dart';
-import 'package:authentication/features/authentication/presentation/components/my_bottom_nav_bar.dart';
-import 'package:authentication/features/authentication/presentation/pages/home/components/body.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../bloc/authentication/auth_bloc.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:authentication/features/authentication/presentation/pages/auth/sign_in_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+// import '../bloc/authentication/auth_bloc.dart';
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+// class HomePage extends StatefulWidget {
+//   const HomePage({Key? key}) : super(key: key);
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-        child: BlocListener<AuthBloc, AuthState>(
-            listener: (context, state) {
-              if (state is LoggedOutState) {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const SignIn()));
-              }
-            },
-            child: Scaffold(
-              appBar: buildAppBar(),
-              body: Body(),
-              bottomNavigationBar: MyBottomNavBar(),
-            )));
-  }
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
 
-  AppBar buildAppBar() {
-    return AppBar(
-      elevation: 0,
-      leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/menu.svg"),
-        onPressed: () {},
-      ),
-    );
-  }
-}
-
-// TextButton(
-//   child: const Text('Log out',
-//       style: TextStyle(
-//           color: Color.fromARGB(255, 12, 109, 139))),
-//   onPressed: () {
-//     BlocProvider.of<AuthBloc>(context).add(LogOutEvent());
-//   },
-// )
-// (do not delete this line; for the logout option)
+// class _HomePageState extends State<HomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SafeArea(
+//         child: BlocListener<AuthBloc, AuthState>(
+//             listener: (context, state) {
+//               if (state is LoggedOutState) {
+//                 Navigator.of(context).pushReplacement(
+//                     MaterialPageRoute(builder: (context) => const SignIn()));
+//               }
+//             },
+//             child: Scaffold(
+//               backgroundColor: Colors.white,
+//               appBar: AppBar(
+//                 title: const Text('Home page'),
+//                 actions: [
+//                   TextButton(
+//                     child: const Text('Log out',
+//                         style: TextStyle(color: Colors.red)),
+//                     onPressed: () {
+//                       BlocProvider.of<AuthBloc>(context).add(LogOutEvent());
+//                     },
+//                   )
+//                 ],
+//               ),
+//               body: const Center(
+//                 child: Image(
+//                   image: AssetImage('assets/home-bg-animate.gif'),
+//                 ),
+//               ),
+//             )));
+//   }
+// }

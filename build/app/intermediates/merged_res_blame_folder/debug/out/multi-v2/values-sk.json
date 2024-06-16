@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.authentication.app-mergeDebugResources-24:/values-sk/values-sk.xml",
+            "outputFile": "com.example.authentication.app-mergeDebugResources-27:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "/Users/isaactalb/.gradle/caches/transforms-3/9dd8ad81c1c9855754e19e62fc96c623/transformed/jetified-play-services-basement-18.3.0/res/values-sk/values.xml",

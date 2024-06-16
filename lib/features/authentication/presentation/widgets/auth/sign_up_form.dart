@@ -6,7 +6,7 @@ import 'package:authentication/features/authentication/presentation/bloc/authent
 import 'package:authentication/features/authentication/presentation/pages/auth/verify_email.dart';
 
 import '../../pages/auth/sign_in_page.dart';
-import '../../pages/home.dart';
+import '../../pages/home_page.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);

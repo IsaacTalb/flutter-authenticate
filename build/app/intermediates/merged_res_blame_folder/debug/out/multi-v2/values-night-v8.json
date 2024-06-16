@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.authentication.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.authentication.app-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/isaactalb/development/Github-repo-project/flutter-authenticate/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/isaactalb/development/Github-repo-project/flutter_authenticate/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

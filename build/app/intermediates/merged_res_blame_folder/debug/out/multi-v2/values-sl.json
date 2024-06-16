@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.authentication.app-mergeDebugResources-24:/values-sl/values-sl.xml",
+            "outputFile": "com.example.authentication.app-mergeDebugResources-27:/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/Users/isaactalb/.gradle/caches/transforms-3/a8d5665db2dab5bb55b993127abcdbdc/transformed/browser-1.4.0/res/values-sl/values-sl.xml",

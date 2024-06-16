@@ -5,7 +5,7 @@ import 'package:authentication/features/authentication/domain/entities/sign_in_e
 import 'package:authentication/features/authentication/presentation/bloc/authentication/auth_bloc.dart';
 import 'package:authentication/features/authentication/presentation/pages/auth/sign_up_page.dart';
 import 'package:authentication/features/authentication/presentation/pages/auth/forgot_password_page.dart';
-import 'package:authentication/features/authentication/presentation/pages/home.dart';
+import 'package:authentication/features/authentication/presentation/pages/home_page.dart';
 
 import '../../pages/auth/verify_email.dart';
 

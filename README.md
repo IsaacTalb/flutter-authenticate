@@ -155,8 +155,7 @@ lib/
 │           ├── widgets/auth
 │           │   │       ├── sign_in_form.dart
 │           │   │       ├── sign_up_form.dart
-│           └── components/
-│               └── my_bottom_nav_bar.dart
+│               └── extensions.dart
 ├── firebase_options.dart
 ├── injection_container.dart
 └── main.dart

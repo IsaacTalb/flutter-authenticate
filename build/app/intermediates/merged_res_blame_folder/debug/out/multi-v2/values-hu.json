@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.authentication.app-mergeDebugResources-24:/values-hu/values-hu.xml",
+            "outputFile": "com.example.authentication.app-mergeDebugResources-27:/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/Users/isaactalb/.gradle/caches/transforms-3/a1648e89606011c26d97ae443a0c7677/transformed/jetified-credentials-1.2.0-rc01/res/values-hu/values-hu.xml",

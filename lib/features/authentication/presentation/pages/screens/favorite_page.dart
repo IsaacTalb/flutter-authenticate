@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:authentication/features/authentication/presentation/pages/const/constants.dart';
+import 'package:authentication/features/authentication/presentation/pages/models/plant.dart';
+import 'package:authentication/features/authentication/presentation/widgets/plant_widget.dart';
+
+class FavoritePage extends StatefulWidget {
+  final List<Plant> favoritePlants;
+  const FavoritePage({
+    super.key,
+    required this.favoritePlants,
+  });
+
+  @override
+  State<FavoritePage> createState() => _FavoritePageState();
+}
+
+class _FavoritePageState extends State<FavoritePage> {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return widget.favoritePlants.isEmpty
+        ? Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 100,
+                  child: Image.asset('assets/images/favorited.png'),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  textDirection: TextDirection.ltr,
+                  '" Your favorites list is empty! "',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'Verdana',
+                      color: Constants.blackColor,
+                      fontWeight: FontWeight.w400),
+                )
+              ],
+            ),
+          )
+        : Container(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            margin: const EdgeInsets.only(top: 20),
+            height: size.height * 0.45,
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              itemCount: widget.favoritePlants.length,
+              itemBuilder: (context, index) {
+                return NewPlantWidget(
+                    plantList: widget.favoritePlants, index: index);
+              },
+            ),
+          );
+  }
+}
