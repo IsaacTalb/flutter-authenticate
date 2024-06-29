@@ -44,3 +44,28 @@
 //             )));
 //   }
 // }
+// import 'screens/about.dart';
+// import 'screens/blog.dart';
+// import 'screens/contact.dart';
+// import 'screens/privacy.dart';
+// import 'screens/warning.dart';
+
+// void _navigateToCategory(String category) {
+//     switch (category) {
+//       case '| About|':
+//         Navigator.push(context, MaterialPageRoute(builder: (context) => AboutScreen()));
+//         break;
+//       case '| Warning|':
+//         Navigator.push(context, MaterialPageRoute(builder: (context) => WarningScreen()));
+//         break;
+//       case '| Blog|':
+//         Navigator.push(context, MaterialPageRoute(builder: (context) => BlogScreen()));
+//         break;
+//       case '| Privacy|':
+//         Navigator.push(context, MaterialPageRoute(builder: (context) => PrivacyScreen()));
+//         break;
+//       case '| Contact|':
+//         Navigator.push(context, MaterialPageRoute(builder: (context) => ContactScreen()));
+//         break;
+//     }
+//   }
