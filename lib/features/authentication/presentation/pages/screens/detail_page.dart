@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:authentication/features/authentication/presentation/pages/const/constants.dart';
 import 'package:authentication/features/authentication/presentation/pages/models/plant.dart';
 import 'package:authentication/features/authentication/presentation/pages/screens/root.dart';
 import 'package:authentication/features/authentication/presentation/widgets/extensions.dart';
+import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
   final int plantId;

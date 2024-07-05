@@ -22,6 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
   final List<Plant> _plantList = Plant.plantList;
+  int hoverIndex = -1;
 
   bool toggleIsFavorite(bool isFavorites) {
     return !isFavorites;
@@ -122,8 +123,17 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemCount: _plantType.length,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(2.0),
+                    return MouseRegion(
+                      onEnter: (_) {
+                        setState(() {
+                          hoverIndex = index;
+                        });
+                      },
+                      onExit: (_) {
+                        setState(() {
+                          hoverIndex = -1;
+                        });
+                      },
                       child: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -131,18 +141,33 @@ class _HomePageState extends State<HomePage> {
                           });
                           _navigateToCategory(_plantType[index]);
                         },
-                        child: Text(
-                          _plantType[index],
-                          style: TextStyle(
-                            fontFamily: 'verdana',
-                            fontSize: 13,
-                            fontWeight: selectedIndex == index
-                                ? FontWeight.bold
-                                : FontWeight.w400,
-                            color: selectedIndex == index
-                                ? Constants.primaryColor
-                                : Constants.blackColor,
-                          ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              _plantType[index],
+                              style: TextStyle(
+                                fontFamily: 'verdana',
+                                fontSize: 13,
+                                fontWeight: selectedIndex == index
+                                    ? FontWeight.bold
+                                    : FontWeight.w400,
+                                 color: selectedIndex == index
+                                    ? Constants.primaryColor // Text color when selected
+                                    : hoverIndex == index
+                                        ? Constants.primaryColor // Text color when hovered
+                                        : Constants.blackColor, // Default text color
+                              ),
+                            ),
+                            Container(
+                              height: 2, // Height of the underline
+                              width: 40, // Width of the underline
+                              color: hoverIndex == index || selectedIndex == index
+                                  ? Constants.primaryColor // Color of the underline when hovered or selected
+                                  : Colors.transparent, // Transparent when not hovered or selected
+                              margin: const EdgeInsets.only(top: 4), // Margin above the underline
+                            ),
+                          ],
                         ),
                       ),
                     );
