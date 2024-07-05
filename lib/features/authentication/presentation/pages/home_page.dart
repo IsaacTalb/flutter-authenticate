@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
       case '| About|':
         Navigator.push(context, MaterialPageRoute(builder: (context) => AboutScreen()));
         break;
-      case '| Warning|':
+      case '| Warning|': 
         Navigator.push(context, MaterialPageRoute(builder: (context) => WarningScreen()));
         break;
       case '| Blog|':
